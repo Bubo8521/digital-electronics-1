@@ -1,5 +1,5 @@
 # digital-electronics-1
-# RRGGBB
+`#RRGGBB`
 # nadpis
 ## nadpis 2
 1. _nadpis_
