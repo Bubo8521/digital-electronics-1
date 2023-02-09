@@ -4,4 +4,4 @@
 1. _nadpis_
 2. **nadpis**
 3. ***nadpis***
-`#RRGGBB#`
+`#RRGGBB`
