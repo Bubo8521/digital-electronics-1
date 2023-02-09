@@ -1,6 +1,7 @@
 # digital-electronics-1
 # nadpis
 ## nadpis 2
-_nadpis_
-**nadpis**
-***nadpis***
+1. _nadpis_
+2. **nadpis**
+3. ***nadpis***
+`#RRGGBB#`
