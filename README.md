@@ -36,7 +36,7 @@ end architecture dataflow;
 1. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 ![logicke funkcie](https://user-images.githubusercontent.com/124887713/219120502-40ec1442-e1d3-4fd1-af98-aa8962273483.PNG)
 
-Vybral jsem si první distribuční zákon. Levá strana je nand, pravá strana je nor
+V tomto prípade sme použili distribučný zákon. Ľavá strana je nand a pravá strana je nor.
 
 2. Link to your public EDA Playground example:
-https://www.edaplayground.com/x/dzNb
+https://www.edaplayground.com/x/ZQ8N
