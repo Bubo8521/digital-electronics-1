@@ -3,6 +3,7 @@
 ### De Morgan's laws
 
 1. Equations of all three versions of logic function f(c,b,a):
+
 ![Rovnice](https://user-images.githubusercontent.com/124887713/219119659-5d6a003b-0aac-4b2b-86c9-65ea61665cac.PNG)
 
   
