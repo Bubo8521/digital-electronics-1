@@ -34,7 +34,7 @@ end architecture dataflow;
 ### Distributive laws
 
 1. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
-<img width="909" alt="Snímek obrazovky (21)" src="https://user-images.githubusercontent.com/124879589/218321623-2c2b99df-dee7-45d1-b2b4-3c90cf033b71.png">
+![logicke funkcie](https://user-images.githubusercontent.com/124887713/219120502-40ec1442-e1d3-4fd1-af98-aa8962273483.PNG)
 
 Vybral jsem si první distribuční zákon. Levá strana je nand, pravá strana je nor
 
