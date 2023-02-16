@@ -23,5 +23,11 @@
    | 14 | 11 | 10 | 1 | 0 | 0 |
    | 15 | 11 | 11 | 0 | 1 | 0 |
    
+1. Create K-maps for other two functions.
+
+   ![Empty Karnaugh map 4x4](images/kmap_empty.png) &nbsp;  &nbsp;  &nbsp;  &nbsp;
+   ![Empty Karnaugh map 4x4](images/kmap_empty.png)
+   
+   
 2. Link to your public EDA Playground example: 
 https://www.edaplayground.com/x/JTfg
