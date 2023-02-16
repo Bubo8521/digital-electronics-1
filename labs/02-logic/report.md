@@ -23,6 +23,9 @@
    | 14 | 11 | 10 | 1 | 0 | 0 |
    | 15 | 11 | 11 | 0 | 1 | 0 |
    
-   
+## 2-bit comparator
+
 2. Link to your public EDA Playground example: 
 https://www.edaplayground.com/x/JTfg
+
+## 4-bit comparator
