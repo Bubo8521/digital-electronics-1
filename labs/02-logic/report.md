@@ -41,8 +41,7 @@
    
    ![Rovnica2](https://user-images.githubusercontent.com/124887713/220679203-789386d6-4848-4d78-b8ae-999ae7be8111.PNG)
 
-3.Link to your public EDA Playground example: 
-
+3. Link to your public EDA Playground example: 
 https://www.edaplayground.com/x/JTfg
 
 ## 4-bit comparator
@@ -114,6 +113,5 @@ https://www.edaplayground.com/x/JTfg
     end process p_stimulus;
 ```
 
-2.Link to your public EDA Playground example:
-
+2. Link to your public EDA Playground example:
 https://www.edaplayground.com/x/mrGR
