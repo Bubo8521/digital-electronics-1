@@ -25,7 +25,22 @@
    
 ## 2-bit comparator
 
-2.Link to your public EDA Playground example: 
+1. Karnaugh maps for other two functions of 2-bit comparator:
+
+   Greater than:
+
+   ![KM1](https://user-images.githubusercontent.com/124887713/220679128-af8bd1e2-3070-414b-a4ff-8d671b37876e.PNG)
+
+   Less than:
+
+   ![KM2](https://user-images.githubusercontent.com/124887713/220679146-27d76bbe-6433-4795-8c8b-089a6617f54e.PNG)
+
+2. Mark the largest possible implicants in the K-map and according to them, write the equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
+
+   ![Rovnica1](https://user-images.githubusercontent.com/124887713/220679179-60745fdd-9bdd-4f8c-ab14-ae08778c7897.PNG)
+   ![Rovnica2](https://user-images.githubusercontent.com/124887713/220679203-789386d6-4848-4d78-b8ae-999ae7be8111.PNG)
+
+3.Link to your public EDA Playground example: 
 https://www.edaplayground.com/x/JTfg
 
 ## 4-bit comparator
