@@ -40,3 +40,4 @@ V tomto prípade sme použili distribučný zákon. Ľavá strana je nand a prav
 
 2. Link to your public EDA Playground example:
 https://www.edaplayground.com/x/ZQ8N
+
