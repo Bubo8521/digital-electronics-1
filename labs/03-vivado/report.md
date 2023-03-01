@@ -8,7 +8,11 @@
 architecture Behavioral of mux_3bit_4to1 is
 begin
 
-    -- WRITE YOUR CODE HERE
+ with sel select
+        f_o <= a when "00",
+               b when "01",
+               c when "10",
+               d when others;
 
 end architecture Behavioral;
 ```
