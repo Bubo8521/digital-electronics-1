@@ -57,7 +57,7 @@ The Nexys A7 board provides two four-digit common anode seven-segment LED displa
 
 2. Listing of LEDs(7:4) part of VHDL architecture from source file `top.vhd`. Try to write logic functions as simple as possible. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   ```vhdl
+```vhdl
    
   --------------------------------------------------------------------
 -- Experiments on your own: LED(7:4) indicators
@@ -81,7 +81,7 @@ The Nexys A7 board provides two four-digit common anode seven-segment LED displa
            '1' when (SW = "0100") else
            '1' when (SW = "1000") else 
                '0';
-   ```
+```
 
 3. Screenshot with simulated time waveforms for LED(7:4). Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
