@@ -13,24 +13,24 @@
 ```vhdl
 architecture Behavioral of jk_ff_rst is
 
-    p_jk_ff_rst : process (clk)
+      jk_ff_rst : process (clk)
         begin
             if rising_edge(clk) then
                 if (rst = '1') then
-                    s_q <= '0';
+                    sig_q <= '0';
                 else
                     if (j = '0' and k = '0') then
-                        s_q <= s_q;
+                        sig_q <= sig_q;
                     elsif (j = '0' and k = '1') then
-                        s_q <= '0';
+                        sig_q <= '0';
                     elsif (j = '1' and k = '0') then
-                        s_q <= '1';
+                        sig_q <= '1';
                     elsif (j = '1' and k = '1') then
-                        s_q <= not s_q;
+                        sig_q <= not sig_q;
                     end if;
                 end if;
             end if;
-        end process p_jk_ff_rst;
+        end process jk_ff_rst;
     q     <= sig_q;
     q_bar <= not sig_q;
 end architecture Behavioral;
