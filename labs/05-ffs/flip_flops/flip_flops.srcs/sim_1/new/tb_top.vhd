@@ -54,49 +54,94 @@ begin
     --------------------------------------------------------
     -- Clock generation process
     --------------------------------------------------------
-    p_clk_gen : process is
-    begin
-        while now < 300 ns loop -- 30 periods of 100MHz clock
-            sig_CLK_100MHz <= '0';
-            wait for c_CLK_100MHZ_PERIOD / 2;
-            sig_CLK_100MHz <= '1';
-            wait for c_CLK_100MHZ_PERIOD / 2;
-        end loop;
-        wait;                -- Process is suspended forever
-    end process p_clk_gen;
+  p_clk_gen : process
+	begin
+		while now < 40 ms loop        
+			s_clk_100MHz <= '0';
+			wait for c_CLK_100MHZ_PERIOD / 2;
+			s_clk_100MHz <= '1';
+			wait for c_CLK_100MHZ_PERIOD / 2;
+		end loop;
+		wait;
+	end process p_clk_gen;
+	 p_reset_gen : process
+		begin
+			s_rst <= '0';
+			wait for 18 ns;
 
-    --------------------------------------------------------
-    -- Reset generation process
-    --------------------------------------------------------
-    p_btnc_gen : process is
-    begin
-        sig_BTNC <= '0';
+			-- Reset activated
+			s_rst <= '1';
+			wait for 13 ns;
 
-        -- ACTIVATE AND DEACTIVATE RESET HERE
-        wait for 65 ns;
-        sig_BTNC <= '1';
-        wait for 23 ns;
-        sig_BTNC <= '0';
+			--Reset deactivated
+			s_rst <= '0';
 
-        wait;
-    end process p_btnc_gen;
+			wait for 47 ns;
 
-    --------------------------------------------------------
-    -- Data generation process
-    --------------------------------------------------------
-    p_stimulus : process is
-    begin
-        report "Stimulus process started";
-        sig_SW <='0'; wait for 13 ns;
-        sig_SW <='1'; wait for 33 ns;
-        sig_SW <='0'; wait for 28 ns;
-        sig_SW <='1'; wait for 66 ns;
-        sig_SW <='0'; wait for 33 ns;
-        -- DEFINE YOUR INPUT DATA HERE
+			s_rst <= '1';
+			wait for 33 ns;
 
-        report "Stimulus process finished";
-        wait;
-    end process p_stimulus;
+			wait for 660 ns;
+			s_rst <= '1';
 
+			wait;
+	 end process p_reset_gen;
+	p_stimulus : process
+	begin
+		report "Stimulus process started" severity note;
+
+		s_j  <= '0';
+		s_k  <= '0';
+
+		--d sekv
+		wait for 38 ns;
+
+		assert ((s_rst = '0') and (s_j = '0') and (s_k = '0') and (s_q = '0') and (s_q_bar = '1'))
+		report "Test failed, reset = 0, after clk rising when s_j = 0 and s_k = 0" severity error;
+
+		wait for 2 ns;
+		s_j  <= '1';
+		s_k  <= '0';
+		wait for 6 ns;
+
+		assert ((s_rst = '0') and (s_j = '1') and (s_k = '0') and (s_q = '1') and (s_q_bar = '0'))
+		report "Test failed, reset = 0, after clk rising when s_j = 1 and s_k = 0" severity error;
+
+		wait for 1 ns;
+		s_j  <= '0';
+		s_k  <= '1';
+		wait for 13 ns;
+
+		assert ((s_rst = '0') and (s_j = '0') and (s_k = '1') and (s_q = '0') and (s_q_bar = '1'))
+		report "Test failed, reset = 0, after clk rising when s_j = 0 and s_k = 1" severity error;
+
+		wait for 1 ns;
+		s_j  <= '1';
+		s_k  <= '0';
+		wait for 7 ns;
+		s_j  <= '1';
+		s_k  <= '1';
+
+		wait for 8 ns;
+
+		assert ((s_rst = '0') and (s_j = '1') and (s_k = '1') and (s_q = '0') and (s_q_bar = '1'))
+		report "Test failed, reset = 0, after clk rising when s_j = 1 and s_k = 1" severity error;
+
+		wait for 2 ns;
+		s_j  <= '0';
+		s_k  <= '0';
+		wait for 7 ns;
+		s_j  <= '0';
+		s_k  <= '1';
+		wait for 7 ns;
+		s_j  <= '1';
+		s_k  <= '0';
+		wait for 7 ns;
+		s_j  <= '1';
+		s_k  <= '1';
+
+		report "Stimulus process finished" severity note;
+		wait;
+	end process p_stimulus;
 end architecture testbench;
 
