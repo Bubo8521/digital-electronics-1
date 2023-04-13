@@ -35,8 +35,10 @@ use IEEE.NUMERIC_STD.ALL;
 entity timer is
     Port ( clck : in STD_LOGIC;
            rst : in STD_LOGIC;
-           wheel : out STD_LOGIC_VECTOR (3 downto 0);
-           ps : out STD_LOGIC_VECTOR (3 downto 0)
+           indicator : out STD_LOGIC_VECTOR (3 downto 0);
+           firstDigit : out STD_LOGIC_VECTOR (3 downto 0);
+           secondDigit : out STD_LOGIC_VECTOR (3 downto 0);
+           thirdDigit : out STD_LOGIC_VECTOR (3 downto 0)
            );
 end timer;
 
@@ -127,12 +129,16 @@ p_output_fsm : process (sig_state) is
     case sig_state is
     
       when GO =>
-        wheel <= "1000";
-        ps <= "0000";
+           indicator <= "1100";
+           firstDigit <= "0001";
+           secondDigit <= "0001";
+           thirdDigit <= "0001";
         
       when PAUSE =>
-        wheel <= "0000";
-        ps <= "1000";
+           indicator <= "1111"; --P
+           firstDigit <= "0000";
+           secondDigit <= "0000";
+           thirdDigit <= "0000";
         
      end case;
    end process p_output_fsm;

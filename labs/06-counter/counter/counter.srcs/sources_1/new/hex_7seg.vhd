@@ -119,7 +119,7 @@ begin
           seg <= "0110000"; -- E
 
         when others =>
-          seg <= "0111000"; -- F
+          seg <= "0011000"; -- P
 
       end case;
 

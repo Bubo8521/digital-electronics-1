@@ -19,6 +19,7 @@ entity top is
            CE        : out STD_LOGIC;
            CF        : out STD_LOGIC;
            CG        : out STD_LOGIC;
+           DP        : out STD_LOGIC;
            AN        : out STD_LOGIC_VECTOR (7 downto 0);
            BTNC      : in STD_LOGIC);
 end top;
@@ -29,8 +30,11 @@ end top;
 
 architecture behavioral of top is
 
-    signal sig_wheel : std_logic_vector(3 downto 0);
-    signal sig_ps : std_logic_vector(3 downto 0);
+    signal sig_indicator : std_logic_vector(3 downto 0);
+    signal sig_first : std_logic_vector(3 downto 0);
+    signal sig_second : std_logic_vector(3 downto 0);
+    signal sig_third : std_logic_vector(3 downto 0);
+    
 
 begin
 
@@ -38,28 +42,36 @@ begin
     port map (
       clck      => CLK100MHZ,
       rst => BTNC,
-      ps => sig_ps,
-      wheel => sig_wheel
+      indicator => sig_indicator,
+      firstDigit => sig_first,
+      secondDigit => sig_second,
+      thirdDigit => sig_third
     );
       
   driver_7seg_4digits : entity work.driver_7seg_4digits
       port map(
-            clk    
-            rst     
-            data0   
-            data1   
-            data2   
-            data3   
-            dp_vect 
-            dp      
-            seg     
-            dig  
+            clk => CLK100MHZ,    
+            rst => BTNC,     
+            data0 => sig_first,   
+            data1 => sig_second,   
+            data2 => sig_third,   
+            data3 => sig_indicator,   
+            dp_vect => "1111", 
+            dp => DP,      
+            seg(6) => CA,
+            seg(5) => CB,
+            seg(4) => CC,
+            seg(3) => CD,
+            seg(2) => CE,
+            seg(1) => CF,
+            seg(0) => CG,    
+            dig(3 downto 0) => AN(3 downto 0)
       );
-
+    --AN(7 downto 4) <= "1111";
+    AN(7 downto 4) <= b"1111";
   --------------------------------------------------------
   -- Other settings
   --------------------------------------------------------
   -- Connect one common anode to 3.3V
-  AN <= b"1111_1110";
 
 end architecture behavioral;
