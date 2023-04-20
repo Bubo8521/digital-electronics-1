@@ -21,7 +21,8 @@ entity top is
            CG        : out STD_LOGIC;
            DP        : out STD_LOGIC;
            AN        : out STD_LOGIC_VECTOR (7 downto 0);
-           BTNC      : in STD_LOGIC);
+           BTNC      : in STD_LOGIC;
+           SW        : in STD_LOGIC_VECTOR (11 downto 0));
 end top;
 
 ----------------------------------------------------------
@@ -42,6 +43,9 @@ begin
     port map (
       clck      => CLK100MHZ,
       rst => BTNC,
+      goDelay => SW (3 downto 0),
+      pauseDelay => SW (7 downto 4),
+      rounds => SW (11 downto 8),
       indicator => sig_indicator,
       firstDigit => sig_first,
       secondDigit => sig_second,
