@@ -34,10 +34,10 @@ Program popisuje následující algoritmus.
 * cnt_up_down - čítač použitý v driver_7seg_4digits
 
 ### Simulace "coundown"
-![Countdown simulace](img/sim_countdown.png)
+![sim_countdown](https://user-images.githubusercontent.com/124887713/235355070-70a53ec6-58b6-4c51-a804-4d7abf1e630e.png)
 
 ### Simulace "timer"
-![Timer simulace](img/sim_timer.png)
+![sim_timer](https://user-images.githubusercontent.com/124887713/235355094-024ea20a-ada1-455b-9f39-db3b1e3c0c9d.png)
 
 ## Návod k ovládání
 
@@ -49,10 +49,10 @@ Po spuštění bude aplikace v jistém prvotním nastevní (tj. 1 10-sekundové 
 Nyní stiskneme tlačítko reset, které nalezneme uprostřed skupiny tlačítek. Na displeji se poté zobrazí '9' na levé pozici, symbolizující 'g' jako go a započne odpočet 1. kola. Jakmile odpočet skončí zobrazí se na levé pozici 'P' jako "Pause" a odpočet pauzy. Tyto dva stavy se budou stále opakovat, až do posledního kola, kdy se na displeji zobrazí "E000", což nám signalizuje konec ('E' jako "End"). V tomto stavu aplikace zůstane, dokud nedojde ke stisku tlačítka reset, kdy se celý popsaný proces bude opakovat.
 
 ### Indikace kola
-![Kolo](img/stateGo.jpg)
+![stateGo](https://user-images.githubusercontent.com/124887713/235355136-602b12d5-cd53-4581-8b59-45b04dfccd68.jpg)
 
 ### Indikace pauzy
-![Pauza](img/statePause.jpg)
+![statePause](https://user-images.githubusercontent.com/124887713/235355140-f7104b71-6624-4140-8f4a-04333a1b0d65.jpg)
 
 ### Indikace konce
-![Konec](img/stateEnd.jpg)
+![stateEnd](https://user-images.githubusercontent.com/124887713/235355145-76bc6689-42a3-44e5-ac15-0023c8c5805b.jpg)
