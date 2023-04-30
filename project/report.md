@@ -17,7 +17,7 @@ Pro ovládání je využito 12 přepínačů a 1 tlačítko, výstup je zobrazen
 
 Program popisuje následující algoritmus. 
 
-![Algoritmus](img/algorithm.png)
+![algorithm](https://user-images.githubusercontent.com/124887713/235354996-87735a50-c633-424f-b25b-b2030cf71e46.png)
 
 [Zdrojové soubory](/project/project/project.srcs/sources_1/new/)
 
