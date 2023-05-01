@@ -13,6 +13,10 @@ Zadanie znelo vytvoriť časovač na kruhový tréning s možnosťou nastaviť p
 
 Pre ovládanie je využitých 12 prepínačov a 1 tlačítko, výstup je zobrazený na sedem-segmentovom displeji. Prvé 4 prepínače (tj. 0 - 3) slúžia pre nastavenie doby kola, nasledujúce 4 prepínače sú k nastaveniu doby pauzy a ďalšie 4 k nastaveniu počtu kôl. Jedno tlačítko uprostred plní funkciu resetu. Z možných 8 pozícií na displeji sú využívané štyri. Ľavá z týchto štyroch slúži na identifikáciu (tj. či je aktuálne kolo, pauza alebo koniec), zvyšné 3 slúžia pre zobrazenie odpočtu.
 
+Funkciu hardwaru nám podrobnejšie popisuje nasledujúca schéma zapojenia.
+
+![ProfiCAD schéma](https://user-images.githubusercontent.com/124887713/235496851-74c4295b-d0dd-46c0-ac83-c25dff683808.png)
+
 ## Software popis
 
 Program popisuje nasledujúci algoritmus. 
